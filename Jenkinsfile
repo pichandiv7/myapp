@@ -3,7 +3,6 @@ node{
      git 'https://github.com/pichandiv7/myapp'
    }
    stage('Compile-Package'){
-
       def mvnHome =  tool name: 'maven7', type: 'maven'   
       sh "${mvnHome}/bin/mvn clean package"
 	  sh 'mv target/myweb*.war target/newapp.war'
